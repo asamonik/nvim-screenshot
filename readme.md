@@ -10,9 +10,9 @@ vim-plug example:<br>
 `Plug 'asamonik/nvim-screenshot', { 'do': 'go build' }`
 
 Packer:<br>
-`https://github.com/yolofanhd/nvim-screenshot.git`
+`use { 'asamonik/nvim-screenshot', run = 'go build' }`
 
-## basic usage
+## Usage
 
 Call `:Screenshot` without arguments to copy a screenshot of the visually selected 
 lines to clipboard.
