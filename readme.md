@@ -2,19 +2,22 @@
 
 Neovim Plugin to screenshot lines of code.
 
-# Install
+## Install
 
 Add the plugin to Neovim and compile the go binary
 
-vim-plug example: 
+vim-plug example:<br> 
 `Plug 'asamonik/nvim-screenshot', { 'do': 'go build' }`
 
-# basic usage
+Packer:<br>
+`use { 'asamonik/nvim-screenshot', run = 'go build' }`
+
+## Usage
 
 Call `:Screenshot` without arguments to copy a screenshot of the visually selected 
 lines to clipboard.
 
-Call `:Screenshot ./path/` to save them as a png file under the specified path
+Call `:Screenshot ./path/` to save selected lines as a .png file under the specified path
 
 # TODO
 * de-indent code in screenshot
