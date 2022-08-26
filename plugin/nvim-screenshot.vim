@@ -9,7 +9,19 @@ function! s:panic(ch, data, ...) abort
 endfunction
 
 function! s:Start_nvim_screenshot(host) abort
-    let binary = nvim_get_runtime_file('main', v:false)[0]
+
+    let g:files = nvim_get_runtime_file('main', v:true)
+
+    if len(g:files) == 0
+    	let g:files = nvim_get_runtime_file('main.exe', v:true)
+	if len(g:files) == 0
+	    echo "cannot find go binary"
+	    finish
+	endif
+    endif
+
+    let binary = g:files[0]
+
     return jobstart([binary], {
                 \ 'rpc': v:true,
                 \ 'on_stderr': function('s:panic')
