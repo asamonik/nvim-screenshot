@@ -5,7 +5,7 @@ go 1.23.0
 require (
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0
 	github.com/neovim/go-client v1.2.1
-	golang.design/x/clipboard v0.6.0
+	golang.design/x/clipboard v0.7.1
 	golang.org/x/image v0.30.0
 )
 
